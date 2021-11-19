@@ -1,0 +1,482 @@
+// Place all the styles related to the lanchiResume controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+	margin:0px;
+}
+
+/*header*/
+#body_header,#body_footer{
+  height: 10vh;
+  background-attachment: fixed;background: linear-gradient(to right, #2857a4, #403066);
+}
+
+/*horizontal-list*/
+.horizontal_list{
+	list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+    margin-left: 40%;
+    padding-top: 20px;
+}
+.horizontal_list li{
+	display: inline-block;
+	margin: 0px 12px 12px 0px;
+	font-weight: bolder;
+    font-size: 20px;
+}
+
+.horizontal_list li a{
+	text-decoration: none;
+	color: white;
+}
+
+.nav-menu li a:hover{
+	color: aliceblue;
+    text-decoration: underline;
+    transition: color 0.5s,text-decoration 1s;
+}
+.text_center{
+	text-align: center;
+}
+
+/*Name and social icon*/
+
+#name-social-container {
+    margin-top: 25vh;
+}
+#my-name{
+	font-size: 3rem;
+	letter-spacing: 0.1rem;
+	color: white;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.social-icon li a i{
+	padding: 10px;
+	font-size: 1.4rem;
+	border-radius: 50%;
+}
+.social-icon li a i:hover{
+	box-shadow: 0px 0px 6px 4px rgba(233,196,196,0.3)
+
+}
+/*About section*/
+section{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	align-items: center;
+}
+section:nth-child(2n+1) {
+    background-color: white;
+}
+section:nth-child(2n) {
+    background-color:lightgrey;
+}
+/*about me*/
+#about{
+	height: auto;
+	width: 100%;
+}
+#my-image{
+	height: 15rem;
+	width: 15rem;
+	margin: auto;
+	
+}
+#my-image img{
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border-style: groove;
+}
+div#my-content {
+    min-height: 40vh;
+    height: auto;
+    width: 50vw;
+    margin: auto;
+ }   
+
+#my-content p {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: darkslateblue;
+    letter-spacing: 0.7px;
+    word-spacing: 2px;
+    line-height: 4vh;
+    text-align: justify;
+    font-size: x-large;
+}
+
+/*section heading*/
+.section-heading {
+    width: auto;
+    font-weight: 400;
+    padding: 20px 10px 10px;
+    
+}
+.section-heading span{
+	font-size: 40px;
+	color: #2857a4;
+	display: inline-block;
+	padding-top: 10px;
+	margin-right: 0.5rem;
+}
+
+/*skills*/
+.skills-display{
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	 padding: 10px;
+    margin-bottom: 30px;
+
+}
+.skills-progress {
+    width: 11rem;
+    height: 2.2rem;
+    background-color: lightgray;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+	margin: 25px;
+	font-size: x-large;
+	font-weight: bold;
+}
+.skill-progress > div {
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 1px 1px 5px 2px #989882;
+}
+.skill-name span{
+	 color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+   vertical-align: middle;
+}
+/* Work Experience section */
+.timeline {
+    width: 75%;
+    position: relative;
+}
+
+.timeline-box {
+    position: relative;
+    padding: px;
+    width: 40%;
+    left: 5%;
+    min-height: 150px;
+    text-align: right;
+   
+}
+
+
+.timeline-box::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: lightgrey;
+    top:39%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-box:nth-child(2n) {
+    left: 53%;
+}
+
+.timeline-box:nth-child(2n+1)::after {
+    
+    right: -14.5%;
+}
+
+.timeline-box:nth-child(2n)::after {
+    
+    left: -9%;
+}
+
+.timeline-container {
+    padding: 8px;
+}
+
+.timeline-logo {
+    position: absolute;
+    width: 50px;
+    overflow: hidden;
+  
+}
+
+.timeline-logo >img {
+    width: 100%;
+}
+
+#timeline-divider {
+    position: absolute;
+    width: 0;
+    top: 11%;
+    left: 50%;
+    border: 1px dashed #0096fa6b;
+    height: 75%;
+    color: #433E3F;
+}
+
+@media only screen and (max-width: 600px){
+
+    #body_header{
+         width: 100%;
+    }
+    #my-name {
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    }
+
+    #my-content p {
+      font-size: 15px;
+      text-align: left;
+    }
+    .nav-menu a
+    {display: none;}
+
+    div#detail{
+        flex-wrap: wrap;
+    }
+
+    .timeline{
+        width: 80%;
+    }
+
+    .skills-display {
+        width: 80%;
+    }
+    #timeline-divider {
+        left: 5%;
+    }
+
+    .timeline-box {
+        left: 12%;
+        width: 90%;
+    }
+
+    .timeline-box:nth-child(2n) {
+        left: 8%;
+    }
+
+    .timeline-box:nth-child(2n+1)::after {
+    
+        left: -9.5%;
+    }
+    
+    .timeline-box:nth-child(2n)::after {
+        
+        left: -9.5%;
+    }
+    
+}
+
+#timeline-divider .timeline-traveller {
+    position: sticky;
+    top: 135px;
+    z-index: 2;
+}
+
+#timeline-divider i {
+    transform: rotate(120deg);
+    margin-top: -35px;
+    display: block;
+	color: #2857a4;
+	font-size: 35px;
+}
+#timeline-divider #car {
+    transform: rotate(90deg);
+}
+.experience-designation {
+    font-size: 1.4rem;
+}
+
+.experience-company-name {
+    margin: 5px 0 0;
+    color: #eb822d;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.experience-duration {
+    color: #2857a4;
+    font-size: 1rem;
+}
+
+.experience-description {
+    font-style: italic;
+    padding: 2px;
+    color: #695049;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.text-align-justify {
+    text-align: justify;
+}
+
+.m-blue {
+    color: #2857a4;
+}
+/* Portfolio Section */
+#portfolio-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.portfolio-image-container {
+    max-width: 350px;
+    margin: 10px;
+    position: relative;
+    
+}
+
+.portfolio-image-container img {
+    width: 100%;
+}
+
+.portfolio-details {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+
+.portfolio-image-container:hover {
+    box-shadow: 0 0 20px #74ADC8;
+}
+
+.portfolio-image-container:hover .portfolio-details {
+    background-color: #80808078;
+    color: white;
+}
+
+	
+
+/*contact*/
+section#contact{
+	background: linear-gradient(to right, #2857, #903976);
+}
+div#detail{
+	display: flex;
+	margin-bottom: 2rem;
+}
+div#detail>div{
+	height: auto;
+	width: 50%;
+	
+}
+div#personal-detail{
+	margin: 1rem 3rem 0rem 6rem;
+}
+div#personal-detail p {
+    padding: 0.5rem;
+    color: silver;
+    font-size: 1.1rem;
+    font-style: oblique;
+}
+div#personal-detail p{
+	border-bottom: 1px double white;
+    color: darkred;
+}
+div#personal-detail button {
+    margin: 0.6rem 0rem 0rem 8rem;
+    font-size: medium;
+    padding: 0.5rem;
+    color: white;
+    font-weight: bold;
+    background-color: #31488c;
+    border: 2px white solid;
+}
+div#company-detail {
+    margin: 0rem 3rem 0rem 6rem;
+}
+div#company-detail h3 {
+    color: white;
+    font-size: 1.3rem;
+
+}
+div#company-detail p, ul {
+    list-style: none;
+    color: #dad9e4;
+    margin-top: -0.5rem;
+    font-family: sans-serif;
+}
+div#company-detail ul li span i {
+    /* margin-right: 0.5rem; */
+    margin: 0rem 0.5rem 0rem -2.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+div#company-detail ul li {
+    margin-bottom: 0.5rem;
+}
+/* as color of gradient and heading almost same so givr diff color*/
+.white-color span {
+	color: white;
+
+}
+
+/*Setting background color */
+.mb-light-purple {
+    background-color: #93738c;
+}
+.mb-light-blue {
+    background-color:rgb(27, 142, 180);
+}
+.mb-light-coral {
+    background-color:lightcoral;
+}
+.mb-light-seagreen {
+    background-color:lightseagreen;
+}
+.mb-light-orange {
+    background-color:rgb(241, 144, 15);
+}
+.mb-dark-red {
+    background-color:rgb(168, 21, 23);
+}
+.mb-light-orange {
+    background-color:rgb(241, 144, 15);
+}
+.mb-light-crimson {
+    background-color:rgb(236, 56, 92);
+}
+.mb-dark-blue {
+    background-color:rgb(22, 22, 179);
+}
+
+
+
+/*percentage class */
+.forty-percent{
+	width: 40%;
+	height: inherit;
+	border-radius: inherit;
+}
+.seventy-percent{
+	width: 70%;
+	height: inherit;
+	border-radius: inherit;
+}
+.fifty-percent{
+	width: 50%;
+	height: inherit;
+	border-radius: inherit;
+}
